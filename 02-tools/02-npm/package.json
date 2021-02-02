@@ -1,0 +1,24 @@
+{
+  "name": "02-npm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "runjs1": "node ./03-scripts/script1.js & node ./03-scripts/script2.js",
+    "runjs2": "node ./03-scripts/script1.js && node ./03-scripts/script2.js",
+    "start": "node ./03-scripts/start.js",
+    "test": "node ./03-scripts/test.js",
+    "evnjs": "node ./03-scripts/env.js",
+    "build": "echo $npm_package_config_mytest",
+    "configjs": "cross-env NODE_ENV=production node ./03-scripts/config.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "config": {
+    "mytext": "Hello World"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
+  }
+}
