@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Test1
+</body>
+<script>
+    // 1. 监听子页面的分段标识符
+    // window.onhashchange = checkMessage;
+
+    // function checkMessage() {
+    //     var message = window.location.hash;
+    //     console.log(message);
+    // }
+
+    // 2. window.name
+    // window.name：无论是否同源，只要再同一个窗口中，
+    // 前一个页面设置的值，在后一个页面中可以通过  
+    // document.getElementById('id').contentWindow.name; 取到
+    window.name = "abcdefg";
+    location.href = "http://localhost:8080/main2";
+</script>
+
+</html>

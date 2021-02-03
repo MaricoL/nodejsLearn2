@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Test2
+</body>
+<script>
+    window.addEventListener('message', function (event) {
+        console.log(event.origin);
+        console.log(event.data);
+        document.body.innerHTML += event.data
+    }, false);
+
+    // event.source：发送消息的窗口
+    // 子窗口通过 event.source 属性引用父窗口，然后发送消息。
+    // window.addEventListener('message', receiveMessage);
+    // function receiveMessage(event) {
+    //     event.source.postMessage('Nice to see you!', '*');
+    // }
+</script>
+
+</html>
